@@ -16,12 +16,17 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
 import { ModalModule } from "ngx-bootstrap/modal";
 import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
-
+import { HttpClientModule } from "@angular/common/http";
 import { IndexComponent } from "./index/index.component";
 import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { LoginComponent } from "./examples/registerpage/login/login.component";
+import { DoctorloginComponent } from "./examples/registerpage/doctorlogin/doctorlogin.component";
+import { UserdoctorprofileComponent } from "./examples/userdoctorprofile/userdoctorprofile.component";
+// import { AngularFireModule } from "angularfire2";
+// import { environment } from "src/environments/environment";
+// import { AngularFirestoreModule } from "@angular/fire/firestore/firestore.module";
 
 @NgModule({
   imports: [
@@ -29,6 +34,7 @@ import { LoginComponent } from "./examples/registerpage/login/login.component";
     BrowserModule,
     FormsModule,
     RouterModule,
+    HttpClientModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),
@@ -41,13 +47,17 @@ import { LoginComponent } from "./examples/registerpage/login/login.component";
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
     ModalModule.forRoot()
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFirestoreModule
   ],
   declarations: [
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
     LandingpageComponent,
-    LoginComponent
+    LoginComponent,
+    DoctorloginComponent,
+    UserdoctorprofileComponent
   ],
   exports: [
     IndexComponent,

@@ -1,21 +1,19 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
-import { EmailValidator } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
-import { HttpHeaders } from "@angular/common/http";
+import Chart from "chart.js";
+
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: "app-userdoctorprofile",
+  templateUrl: "./userdoctorprofile.component.html",
+  styleUrls: ["./userdoctorprofile.component.scss"]
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class UserdoctorprofileComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   focus;
   focus1;
   focus2;
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router) {}
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -84,26 +82,66 @@ export class LoginComponent implements OnInit, OnDestroy {
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("register-page");
 
-    this.onMouseMove(event);
+    // this.onMouseMove(event);
+
+    // var canvas: any = document.getElementById("lineChartExample");
+    // var ctx = canvas.getContext("2d");
+    // var gradientFill = ctx.createLinearGradient(0, 350, 0, 50);
+    // gradientFill.addColorStop(0, "rgba(228, 76, 196, 0.0)");
+    // gradientFill.addColorStop(1, "rgba(228, 76, 196, 0.14)");
+    var canvas: any = document.getElementById("myChart");
+    var ctx = canvas.getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "pie",
+      data: {
+        labels: ["cancelled", "pending", "successful", "unsuccessful"],
+        // red - cancelled appointment
+        // yellow-pending appointment
+        // green -successfully checked patient
+        // blue - unsuccessful checked
+        datasets: [
+          {
+            label: "# of Votes",
+            data: [2, 5, 10, 1],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)", //red,
+
+              "rgba(255,204,0,0.2)", //yellow
+              "rgba(0,255,0,0.2)", //green
+              "rgba(54, 162, 235, 0.2)" //blue
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 0.2)", //red,
+
+              "rgba(255,204,0,0.2)", //yellow
+              "rgba(0,255,0,0.2)", //green
+              "rgba(54, 162, 235, 0.2)" //blue
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
+      }
+    });
   }
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("register-page");
   }
 
-  save(formdata) {
-    console.log(formdata);
-    // let headers = new Headers();
-    // headers.append("Content-Type", "application/json");
-    this.http
-      .post("http://localhost:3000/api/login", {
-        headers: new HttpHeaders({ "custom-header": "hello" })
-      })
-      .subscribe(result => console.log(result));
-
-    // if (formdata.email && formdata.password) {
-    //   this.router.navigate(["/profile"]);
-    // }
-    this.router.navigate(["/profile"]);
-  }
+  // save(formdata) {
+  //   console.log(formdata);
+  //   if (formdata.email && formdata.uniqueid) {
+  //     this.router.navigate(["/userprofile"]);
+  //   }
 }

@@ -94,7 +94,85 @@
     </div>
   </div>
 </nav>
-<div class="wrapper">
+
+<div class="container" style="margin-top:200px;">
+  <div class="row">
+    <div class="square square-7" id="square7"></div>
+    <div class="square square-8" id="square8"></div>
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="assets/img/aman.jpeg"
+          class="card-body"
+          width="400px"
+          height="300px"
+        />
+      </div>
+      <alert [type]="'default'">
+        Aman Kumar Soni <span style="float:right">114587</span>
+      </alert>
+    </div>
+    <div class="col-md-8" style="margin-top:10px;">
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+
+<!-- user Data -->
+
+<div class="container">
+  <h1 class="text-center">Patient Data</h1>
+  <ul class="list-group">
+    <li class="list-group-item " aria-disabled="true">
+      <a routerLink="/profile"
+        ><p style="color:black">
+          patient Name <span style="float:right">patientUniqueId</span>
+        </p></a
+      >
+    </li>
+    <br />
+    <li class="list-group-item">
+      <a routerLink="/profile"
+        ><p style="color:black">
+          patient Name <span style="float:right">patientUniqueId</span>
+        </p></a
+      >
+    </li>
+    <br />
+    <li class="list-group-item">
+      <a routerLink="/profile"
+        ><p style="color:black">
+          patient Name <span style="float:right">patientUniqueId</span>
+        </p></a
+      >
+    </li>
+    <br />
+    <li class="list-group-item">
+      <a routerLink="/profile"
+        ><p style="color:black">
+          patient Name <span style="float:right">patientUniqueId</span>
+        </p></a
+      >
+    </li>
+    <br />
+    <li class="list-group-item">
+      <a routerLink="/profile"
+        ><p style="color:black">
+          patient Name <span style="float:right">patientUniqueId</span>
+        </p></a
+      >
+    </li>
+    <br />
+  </ul>
+</div>
+
+<!-- <div class="wrapper">
   <div class="page-header">
     <div class="page-header-image"></div>
     <div class="content">
@@ -111,7 +189,7 @@
                   src="assets/img/square1-red.png"
                 />
 
-                <h4 class="card-title">Login</h4>
+                <h4 class="card-title">Doctor</h4>
               </div>
               <div class="card-body">
                 <form class="form" (ngSubmit)="save(f.value)" #f="ngForm">
@@ -147,19 +225,19 @@
                     </div>
                     <input
                       class="form-control"
-                      placeholder="password"
+                      placeholder="User Unique Id"
                       type="password"
                       (focus)="focus1 = true"
                       (blur)="focus1 = false"
-                      name="password"
-                      [(ngModel)]="password"
-                      id="password"
+                      name="uniqueid"
+                      [(ngModel)]="uniqueid"
+                      id="uniqueid"
                       required
                     />
                   </div>
                   <!--  -->
 
-                  <!-- <div class="form-check text-left">
+<!-- <div class="form-check text-left">
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" />
 
@@ -167,12 +245,12 @@
                       <a href="javascript:void(0)"> terms and conditions </a> .
                     </label>
                   </div> -->
-                  <div class="card-footer">
+<!-- <div class="card-footer">
                     <button
                       type="submit"
                       class="btn btn-danger btn-round btn-lg"
                     >
-                      Login
+                      Get user Data
                     </button>
                   </div>
                 </form>
@@ -272,4 +350,4 @@
       </div>
     </div>
   </footer>
-</div>
+</div> -->

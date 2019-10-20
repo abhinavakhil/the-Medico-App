@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: "app-registerpage",
@@ -7,12 +8,16 @@ import { Router } from "@angular/router";
 })
 export class RegisterpageComponent implements OnInit, OnDestroy {
   isCollapsed = true;
+
   focus;
   focus1;
   focus2;
   focus3;
   focus4;
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private http: HttpClient) {
+    // this.users = this.afs.collection("users").valueChanges();
+  }
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -90,8 +95,18 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
 
   save(formdata) {
     console.log(formdata);
-    if (formdata.email && formdata.password) {
-      this.router.navigate(["/login"]);
-    }
+
+    this.http
+      .post("http://localhost:3000/api/register", {
+        fullName: formdata.fullName,
+        email: formdata.email,
+        password: formdata.password,
+        city: formdata.city,
+        aadhar: formdata.adhar,
+        contact: formdata.contact
+      })
+      .subscribe(result => console.log(result));
+
+    this.router.navigate(["/login"]);
   }
 }

@@ -24,6 +24,11 @@ import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.c
 import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 
+// import { AngularFireModule } from "angularfire2";
+// import { AngularFireModule } from "angularfire2";
+// import { AngularFirestoreModule } from "angularfire2/firestore";
+// import { environment } from "src/environments/environment";
+
 @NgModule({
   declarations: [
     AppComponent
@@ -39,6 +44,8 @@ import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.c
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFirestoreModule,
     // BsDropdownModule.forRoot(),
     // ProgressbarModule.forRoot(),
     // TooltipModule.forRoot(),

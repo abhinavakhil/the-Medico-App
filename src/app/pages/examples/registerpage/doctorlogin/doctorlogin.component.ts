@@ -1,21 +1,18 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
-import { EmailValidator } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
-import { HttpHeaders } from "@angular/common/http";
+
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: "app-doctorlogin",
+  templateUrl: "./doctorlogin.component.html",
+  styleUrls: ["./doctorlogin.component.scss"]
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class DoctorloginComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   focus;
   focus1;
   focus2;
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router) {}
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -93,17 +90,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   save(formdata) {
     console.log(formdata);
-    // let headers = new Headers();
-    // headers.append("Content-Type", "application/json");
-    this.http
-      .post("http://localhost:3000/api/login", {
-        headers: new HttpHeaders({ "custom-header": "hello" })
-      })
-      .subscribe(result => console.log(result));
-
-    // if (formdata.email && formdata.password) {
-    //   this.router.navigate(["/profile"]);
-    // }
-    this.router.navigate(["/profile"]);
+    if (formdata.email && formdata.password) {
+      this.router.navigate(["/doctorprofile"]);
+    }
   }
 }

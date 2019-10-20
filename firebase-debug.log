@@ -1,0 +1,144 @@
+[debug] [2019-10-19T22:32:16.973Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:32:16.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-10-19T22:32:16.978Z] CLI Version:   7.6.1
+[debug] [2019-10-19T22:32:16.978Z] Platform:      win32
+[debug] [2019-10-19T22:32:16.978Z] Node Version:  v10.16.2
+[debug] [2019-10-19T22:32:16.980Z] Time:          Sun Oct 20 2019 04:02:16 GMT+0530 (India Standard Time)
+[debug] [2019-10-19T22:32:16.981Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:32:16.981Z] 
+[debug] [2019-10-19T22:32:16.993Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-19T22:32:16.994Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Abhinav Akhil\Desktop\blk-design-system-angular-master
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-10-19T22:32:41.939Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-19T22:32:41.939Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-19T22:32:42.483Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:32:42.635Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2019-10-19T22:32:43.600Z] <<< HTTP RESPONSE 200
+[info] i  Using project medco-ff02a (Medco)
+[info] 
+=== Firestore Setup
+[debug] [2019-10-19T22:32:46.231Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-19T22:32:46.233Z] > authorizing via signed-in user
+[debug] [2019-10-19T22:32:46.235Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/medco-ff02a  
+ 
+[debug] [2019-10-19T22:32:46.742Z] <<< HTTP RESPONSE 200
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2019-10-19T22:33:00.781Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/medco-ff02a/releases?pageSize=10&pageToken=  
+ 
+[debug] [2019-10-19T22:33:02.857Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:33:02.860Z] Found ruleset: projects/medco-ff02a/rulesets/88dff3a2-9329-46af-9c7b-487d21a407f9
+[debug] [2019-10-19T22:33:02.861Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/medco-ff02a/rulesets/88dff3a2-9329-46af-9c7b-487d21a407f9  
+ 
+[debug] [2019-10-19T22:33:04.527Z] <<< HTTP RESPONSE 200
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2019-10-19T22:33:30.363Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:33:30.367Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-10-19T22:33:30.368Z] CLI Version:   7.6.1
+[debug] [2019-10-19T22:33:30.368Z] Platform:      win32
+[debug] [2019-10-19T22:33:30.368Z] Node Version:  v10.16.2
+[debug] [2019-10-19T22:33:30.371Z] Time:          Sun Oct 20 2019 04:03:30 GMT+0530 (India Standard Time)
+[debug] [2019-10-19T22:33:30.371Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:33:30.371Z] 
+[debug] [2019-10-19T22:33:30.388Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-19T22:33:30.390Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Abhinav Akhil\Desktop\blk-design-system-angular-master
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-10-19T22:34:03.257Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2019-10-19T22:34:04.737Z] <<< HTTP RESPONSE 200
+[info] i  Using project medco-ff02a (Medco)
+[info] 
+=== Firestore Setup
+[debug] [2019-10-19T22:34:45.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-19T22:34:45.901Z] > authorizing via signed-in user
+[debug] [2019-10-19T22:34:45.902Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/medco-ff02a  
+ 
+[debug] [2019-10-19T22:34:46.437Z] <<< HTTP RESPONSE 200
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2019-10-19T22:35:00.864Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/medco-ff02a/releases?pageSize=10&pageToken=  
+ 
+[debug] [2019-10-19T22:35:03.026Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:35:03.027Z] Found ruleset: projects/medco-ff02a/rulesets/88dff3a2-9329-46af-9c7b-487d21a407f9
+[debug] [2019-10-19T22:35:03.028Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/medco-ff02a/rulesets/88dff3a2-9329-46af-9c7b-487d21a407f9  
+ 
+[debug] [2019-10-19T22:35:04.754Z] <<< HTTP RESPONSE 200
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2019-10-19T22:35:18.075Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/medco-ff02a/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-10-19T22:35:18.076Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/medco-ff02a/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-10-19T22:35:20.874Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:35:21.006Z] <<< HTTP RESPONSE 200
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-10-19T22:36:21.863Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2019-10-19T22:36:23.075Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:36:24.812Z] Error: EEXIST: file already exists, mkdir 'C:\Users\Abhinav Akhil\Desktop\blk-design-system-angular-master\dist'
+    at Object.mkdirSync (fs.js:757:3)
+    at mkdirsSync (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\mkdirs-sync.js:22:9)
+    at Object.mkdirsSync (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\mkdirs-sync.js:27:16)
+    at Object.createFileSync (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:31:11)
+    at Config.writeProjectFile (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:178:8)
+    at C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:197:18
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.

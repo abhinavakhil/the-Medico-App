@@ -54,7 +54,7 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://twitter.com/CreativeTim"
+            href="https://twitter.com/"
             placement="bottom"
             target="_blank"
             tooltip="Follow us on Twitter"
@@ -66,7 +66,7 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://www.facebook.com/CreativeTim"
+            href="https://www.facebook.com/"
             placement="bottom"
             target="_blank"
             tooltip="Like us on Facebook"
@@ -78,7 +78,7 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="https://www.instagram.com/"
             placement="bottom"
             target="_blank"
             tooltip="Follow us on Instagram"
@@ -111,7 +111,9 @@
                   src="assets/img/square1-red.png"
                 />
 
-                <h4 class="card-title">Register</h4>
+                <h4 class="card-title">
+                  Register<span style="font-size:15px;">As User</span>
+                </h4>
               </div>
               <div class="card-body">
                 <form class="form" (ngSubmit)="save(f.value)" #f="ngForm">
@@ -130,60 +132,16 @@
                       type="text"
                       (focus)="focus = true"
                       (blur)="focus = false"
-                      name="name"
-                      [(ngModel)]="name"
-                      id="name"
+                      name="fullName"
+                      [(ngModel)]="fullName"
+                      id="fullName"
                     />
                   </div>
+
+                  <!-- city  -->
                   <div
                     class="input-group"
                     [ngClass]="{ 'input-group-focus': focus1 === true }"
-                  >
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="tim-icons icon-email-85"> </i>
-                      </div>
-                    </div>
-                    <input
-                      class="form-control"
-                      placeholder="Email"
-                      type="text"
-                      (focus)="focus1 = true"
-                      (blur)="focus1 = false"
-                      name="email"
-                      [(ngModel)]="email"
-                      id="email"
-                    />
-                  </div>
-                  <!--  -->
-                  <div
-                    class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus2 === true }"
-                  >
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="tim-icons icon-calendar-60"> </i>
-                      </div>
-                    </div>
-                    <input
-                      class="form-control"
-                      placeholder="date of birth"
-                      
-                      (focus)="focus2 = true"
-                      (blur)="focus2 = false"
-                      name="dob"
-                      [(ngModel)]="dob"
-                      id="dob"
-                      bsDatepicker
-                      [bsConfig]="{
-                        isAnimated: true,
-                        containerClass: 'theme-red'
-                      }"
-                    />
-                  </div>
-                  <div
-                    class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus3 === true }"
                   >
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -194,35 +152,77 @@
                       class="form-control"
                       placeholder="City"
                       type="text"
-                      (focus)="focus3 = true"
-                      (blur)="focus3 = false"
+                      (focus)="focus1 = true"
+                      (blur)="focus1 = false"
                       name="city"
                       [(ngModel)]="city"
                       id="city"
                     />
                   </div>
-                  <!--  -->
+                  <!-- dob -->
                   <div
                     class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus4 === true }"
+                    [ngClass]="{ 'input-group-focus': focus2 === true }"
                   >
                     <div class="input-group-prepend">
                       <div class="input-group-text">
-                        <i class="tim-icons icon-lock-circle"> </i>
+                        <i class="tim-icons icon-compass-05"> </i>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      placeholder="Enter Aadhar Number"
+                      type="text"
+                      (focus)="focus2 = true"
+                      (blur)="focus2 = false"
+                      name="aadhar"
+                      [(ngModel)]="aadhar"
+                      id="aadhar"
+                    />
+                  </div>
+                  <!-- contact -->
+                  <div
+                    class="input-group"
+                    [ngClass]="{ 'input-group-focus': focus2 === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="tim-icons icon-badge"> </i>
                       </div>
                     </div>
                     <input
                       class="form-control"
                       placeholder="Contact"
-                      type="contact"
-                      (focus)="focus4 = true"
-                      (blur)="focus4 = false"
-                      name="password"
+                      type="text"
+                      (focus)="focus2 = true"
+                      (blur)="focus2 = false"
+                      name="contact"
                       [(ngModel)]="contact"
                       id="contact"
                     />
                   </div>
-                  <!--  -->
+                  <!-- Email -->
+                  <div
+                    class="input-group"
+                    [ngClass]="{ 'input-group-focus': focus3 === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="tim-icons icon-email-85"> </i>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      placeholder="Email"
+                      type="text"
+                      (focus)="focus3 = true"
+                      (blur)="focus3 = false"
+                      name="email"
+                      [(ngModel)]="email"
+                      id="email"
+                    />
+                  </div>
+                  <!-- password -->
                   <div
                     class="input-group"
                     [ngClass]="{ 'input-group-focus': focus5 === true }"
@@ -264,6 +264,9 @@
             </div>
           </div>
         </div>
+
+        <!-- as doctor -->
+
         <div class="register-bg"></div>
         <div class="square square-1" id="square1"></div>
         <div class="square square-2" id="square2"></div>
