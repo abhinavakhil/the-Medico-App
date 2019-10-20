@@ -27,6 +27,10 @@ import { UserdoctorprofileComponent } from "./examples/userdoctorprofile/userdoc
 // import { AngularFireModule } from "angularfire2";
 // import { environment } from "src/environments/environment";
 // import { AngularFirestoreModule } from "@angular/fire/firestore/firestore.module";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { environment } from "src/environments/environment";
 
 @NgModule({
   imports: [
@@ -46,7 +50,8 @@ import { UserdoctorprofileComponent } from "./examples/userdoctorprofile/userdoc
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AngularFireAuthModule
     // AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule
   ],

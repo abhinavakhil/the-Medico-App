@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
+import { AngularFireAuth } from "@angular/fire/auth";
+import * as firebase from "firebase/app";
 
 @Component({
   selector: "app-doctorlogin",
@@ -12,7 +14,7 @@ export class DoctorloginComponent implements OnInit, OnDestroy {
   focus1;
   focus2;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public afAuth: AngularFireAuth) {}
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -93,5 +95,16 @@ export class DoctorloginComponent implements OnInit, OnDestroy {
     if (formdata.email && formdata.password) {
       this.router.navigate(["/doctorprofile"]);
     }
+  }
+
+  googleLogin() {
+    return new Promise<any>((resolve, reject) => {
+      let provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope("profile");
+      provider.addScope("email");
+      this.afAuth.auth.signInWithPopup(provider).then(res => {
+        resolve(res);
+      });
+    });
   }
 }

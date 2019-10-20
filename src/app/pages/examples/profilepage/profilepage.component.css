@@ -1,0 +1,10 @@
+.myimg {
+  transition: transform 0.2s; /* Animation */
+  border: #39476b 5px solid;
+}
+
+.myimg:hover {
+  transform: scale(2);
+  z-index: 2;
+  position: relative;
+}
